@@ -8,12 +8,21 @@
 </head>
 <body>
     <h1>Level 1 (second hack)</h1>
-<form action="protected.html">
-    <label for="login">Login</label>
-    <input type="text" id="login" name="login" placeholder="login" required>
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password" placeholder="password" required>
+<form id="form" action="protected.html">
+    <label for="password">Login</label>
+    <input type="text" id="password" placeholder="login" required>
+    <label for="login">Password</label>
+    <input type="password" id="login" placeholder="password" required>
     <input type="submit" name="submit" value="Log me">
 </form>
+<script>
+    document.getElementById("form").addEventListener("submit", (event) => {
+        if(document.getElementById("login").value != "admin" || document.getElementById("password").value != "hello123")
+        {
+            alert("login error");
+            event.preventDefault();
+        }
+    });
+</script>
 </body>
 </html>
