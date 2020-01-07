@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hacking 2</title>
+</head>
+<body>
+    <h1>Level 2 (test hack)</h1>
+<form id="form" action="protected.html">
+    <label for="password">Login</label>
+    <input type="text" id="password" placeholder="login" required>
+    <label for="login">Password</label>
+    <input type="password" id="login" placeholder="password" required>
+    <input type="submit" name="submit" value="Log me">
+</form>
+<script>
+
+function makeid(length) {
+   var result           = '';
+   var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+   var charactersLength = characters.length;
+   for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+   }
+   return result;
+}
+    document.getElementById("form").addEventListe   ner("submit", (event) => {
+        if(document.getElementById("login").value != makeid(10) || document.getElementById("password").value != makeid(10))
+        {
+            alert("login error");
+            event.preventDefault();
+        }
+    });
+</script>
+</body>
+</html>
