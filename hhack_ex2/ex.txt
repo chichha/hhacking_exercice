@@ -1,2 +1,2 @@
 Objectifs : parvenir à atteindre la page protégé via le login.
-Consigne commencé par la page login.html dans votre navigateur web
+Consigne : commencé par la page login.html dans votre navigateur web
