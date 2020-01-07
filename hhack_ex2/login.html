@@ -26,7 +26,7 @@ function makeid(length) {
    }
    return result;
 }
-    document.getElementById("form").addEventListe   ner("submit", (event) => {
+    document.getElementById("form").addEventListener("submit", (event) => {
         if(document.getElementById("login").value != makeid(10) || document.getElementById("password").value != makeid(10))
         {
             alert("login error");
